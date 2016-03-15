@@ -1,0 +1,84 @@
+<% include header.ejs %>
+<div id="content">
+		
+		<!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+			<div id="page-header" style="background-image:url(content/backgrounds/1920x500-2.jpg);">
+				
+				<div class="container">
+					<div class="row">
+						<div class="span6">
+
+                            <h6>Blog</h6>
+                        
+						</div><!-- end .span6 -->
+                        <div class="span6">
+                        	
+                            <div class="breadcrumbs">
+										
+                                <ul>
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li class="current">Blog</li>
+                                </ul>
+                                
+                            </div><!-- end .breadcrumbs -->
+                            
+                        </div><!-- end .span6 -->
+					</div><!-- end .row -->
+				</div><!-- end .container -->
+				
+			</div><!-- end #page-header -->
+            
+            <div class="container">
+
+            	<div class="row">
+                	<div class="span9">
+                    	 <% for(var i=0;i<articles.length;++i) {%>
+                        <div class="post format-standard has-post-thumbnail hentry">
+	
+							<a href="#" class="post-thumbnail">
+								<img src="<%=articles[i].image %>" alt="" >	
+							</a>
+							
+							<div class="post-header">							
+								
+                                
+                                <h3 class="post-title">
+									<a rel="bookmark" href="/view?id=<%= articles[i]._id %>"><%= articles[i].heading %></a>
+								</h3>	
+								
+							</div><!-- .post-header -->
+							<div class="post-content">
+								
+								<p><%= articles[i].subheading %> </p> 
+								
+								<p>
+                                	<a class="more-link btn" href="/blog?id=<%= articles[i]._id %>">Read more</a>
+                                </p>
+							
+							</div><!-- .post-content -->
+						
+                            
+                        </div><!-- end .post -->
+                        <%}%>
+                        
+                        <div class="navigation pagination">
+							
+							<div class="nav-links">	
+                                <% for(var i=0;i<len/10;++i){ %>							
+								<div class="page-numbers current"><a href ="/blog?page=<%= i %>"><div class="meta-nav screen-reader-text">Page</div><%= i+1 %></a></div>
+                                <% } %>
+
+							</div><!-- end .nav-links -->
+                     
+					</div><!-- end .navigation -->
+                        
+                    </div><!-- end .span9 -->
+                </div><!-- end .row -->
+            </div><!-- end .container -->
+            
+		<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+</div><!-- end #content -->
+<% include footer.ejs %>

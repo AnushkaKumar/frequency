@@ -1,0 +1,80 @@
+<% include header.ejs %>
+        <div id="content">
+        
+        <!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+            <div id="page-header" style="background-image:url(content/backgrounds/1920x500-2.jpg);">
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="span6">
+
+                            <h6>Forms</h6>
+                        
+                        </div><!-- end .span6 -->
+                        <div class="span6">
+                            
+                            <div class="breadcrumbs">
+                                        
+                                <ul>
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li class="current">Forms</li>
+                                </ul>
+                                
+                            </div><!-- end .breadcrumbs -->
+                            
+                        </div><!-- end .span6 -->
+                    </div><!-- end .row -->
+                </div><!-- end .container -->
+                
+            </div><!-- end #page-header -->
+            
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        
+                        <div class="headline-center">
+                            
+                            <h2>Forms</h2>
+                            
+                        </div><!-- end .headline-center -->
+                        
+                    </div><!-- end .span12 -->
+                </div><!-- end .row -->
+            </div><!-- end .container -->
+            
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        
+                        <form  method="post" action="/create">  
+                            <fieldset>
+                                <div id="formstatus"></div>
+                                <p>
+                                    <input class="span12" type="text" id="name" name="heading" value="" placeholder="Heading*" >
+                                </p>
+                                <p>
+                                    <input class="span12" type="text" id="email" name="subheading" value="" placeholder="SuHeading*" >
+                                </p>
+                                <p>
+                                    <input class="span12" type="text" id="subject" name="image" value="" placeholder="Image*"  >
+                                </p>
+                                <p>
+                                    <textarea class="span12" id="message" name="content" rows="7" cols="25" placeholder="Content*"></textarea>
+                                </p>
+                                <p class="last">
+                                    <input class="btn" id="submit" type="submit" name="submit" value="Submit" >
+                                </p>
+                            </fieldset>
+                        </form><!-- end #contact-form -->
+                    
+                    </div><!-- end .span12 -->
+                </div><!-- end .row -->
+            </div><!-- end .container -->
+            
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        </div><!-- end #content -->
+        <% include footer.ejs %>
